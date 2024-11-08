@@ -19,7 +19,7 @@ struct Product {
     double price;
 };
 
-// Global variables
+// Global variable
 User currentUser;
 vector<Product> products = { {"Burger", 5.99}, {"Pizza", 8.99}, {"Soda", 1.50}, {"Fries", 2.99},
                              {"Pasta", 7.50}, {"Salad", 4.99}, {"Ice Cream", 3.50}, {"Coffee", 2.50},
