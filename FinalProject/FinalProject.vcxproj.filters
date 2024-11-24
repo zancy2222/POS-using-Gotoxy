@@ -26,9 +26,6 @@
     <ClInclude Include="Product.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cart.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UserManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>

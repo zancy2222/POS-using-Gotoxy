@@ -1,4 +1,3 @@
-#pragma once
 #ifndef PAYMENTMANAGER_H
 #define PAYMENTMANAGER_H
 
@@ -12,10 +11,10 @@ void processPayment() {
     system("cls");
     setPurpleText();
     drawBorder();
-    gotoxy(10, 2); std::cout << "ONE BITE Payments";
+    gotoxy(10, 2); cout << "ONE BITE Payments";
 
     if (cart.empty()) {
-        gotoxy(10, 4); std::cout << "Your cart is empty. Add items to cart before proceeding to payment. Press Enter to go back.";
+        gotoxy(10, 4); cout << "Your cart is empty. Add items to cart before proceeding to payment. Press Enter to go back.";
         _getch();
         return;
     }
@@ -26,19 +25,19 @@ void processPayment() {
     }
 
     double payment;
-    gotoxy(10, 4); std::cout << "Your total is: PHP: " << std::fixed << std::setprecision(2) << total;
-    gotoxy(10, 5); std::cout << "Enter payment amount: ";
-    std::cin >> payment;
+    gotoxy(10, 4); cout << "Your total is: PHP: " << fixed << setprecision(2) << total;
+    gotoxy(10, 5); cout << "Enter payment amount: ";
+    cin >> payment;
 
     if (payment >= total) {
-        gotoxy(10, 6); std::cout << "Payment successful!";
-        gotoxy(10, 7); std::cout << "Change: PHP: " << std::fixed << std::setprecision(2) << payment - total;
+        gotoxy(10, 6); cout << "Payment successful!";
+        gotoxy(10, 7); cout << "Change: PHP: " << fixed << setprecision(2) << payment - total;
         cart.clear();
     }
     else {
-        gotoxy(10, 6); std::cout << "Insufficient payment. Transaction canceled.";
+        gotoxy(10, 6); cout << "Insufficient payment. Transaction canceled.";
     }
-    gotoxy(10, 8); std::cout << "Press Enter to continue.";
+    gotoxy(10, 8); cout << "Press Enter to continue.";
     _getch();
 }
 

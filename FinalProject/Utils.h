@@ -5,6 +5,8 @@
 #include <conio.h>
 #include <windows.h>
 
+using namespace std;
+
 void gotoxy(int x, int y) {
     COORD coord;
     coord.X = x;
@@ -16,27 +18,27 @@ void setPurpleText() {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 5);  // Purple color
 }
 
-void maskInput(std::string& input) {
+void maskInput(string& input) {
     char ch;
     input = "";
     while ((ch = _getch()) != 13) {  // Enter key ASCII code
         input.push_back(ch);
-        std::cout << '*';
+        cout << '*';
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 void drawBorder() {
     for (int i = 0; i < 50; i++) {
-        std::cout << "*";
+        cout << "*";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
-bool confirmAction(const std::string& message) {
+bool confirmAction(const string& message) {
     char choice;
-    std::cout << message << " (Y/N): ";
-    std::cin >> choice;
+    cout << message << " (Y/N): ";
+    cin >> choice;
     return choice == 'Y' || choice == 'y';
 }
 

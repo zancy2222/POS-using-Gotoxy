@@ -130,7 +130,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cart.h" />
     <ClInclude Include="PaymentManager.h" />
     <ClInclude Include="ProductManager.h" />
     <ClInclude Include="UserManager.h" />
